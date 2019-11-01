@@ -38,8 +38,12 @@ function setup() {
     yPos = 0;
   }
 
-  image(img, width/2, height/2);
   filter(GRAY);
+  image(img, width/2, height/2);
+  
+  tint(255, 127)
+  image(img, width/4, height/2);
+  
   
   stroke(0);
   fill(255);
