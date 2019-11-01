@@ -19,7 +19,7 @@ function setup() {
   strokeWeight(3);
 
   const numSquaresX = width/startSize;
-  const numSquaresY = height/startSize;
+  let numSquaresY = height/startSize;
   let xPos = 0;
   let yPos = 0;
   
@@ -38,9 +38,28 @@ function setup() {
     yPos = 0;
   }
 
-  image(img, width/2, height - height/4);
+  image(img, width/2, height/2);
   filter(GRAY);
   
+  numSquaresY = height/2/startSize;
+  xPos = 0;
+  yPos = height - startSize;
+
+  for (let i = 0; i < numSquaresX; i++) {
+    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY)); j++) {
+      
+      const steps = Math.round(random(4, 7));
+      const offset = random(-3, 3);
+
+      drawSquares(xPos, yPos, startSize, finalSize, steps, offset);
+      
+      yPos -= startSize;
+    }
+    
+    xPos += startSize;
+    yPos = height - startSize;
+  }
+
 }
 
 function draw() {}
