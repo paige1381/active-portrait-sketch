@@ -48,7 +48,7 @@ function setup() {
   yPos = height - startSize;
 
   for (let i = 0; i < numSquaresX; i++) {
-    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY)); j++) {
+    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY - 1)); j++) {
       
       const steps = Math.round(random(4, 7));
       const offset = random(-3, 3);
