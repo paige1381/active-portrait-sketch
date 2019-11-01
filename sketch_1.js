@@ -41,8 +41,8 @@ function setup() {
   image(img, width/2, height/2);
   filter(GRAY);
   
-  stroke(255);
-  fill(0);
+  stroke(0);
+  fill(255);
   numSquaresY = height/2/startSize;
   xPos = 0;
   yPos = height - startSize;
