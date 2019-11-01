@@ -39,7 +39,7 @@ function setup() {
   }
 
   image(img, width/2, height - height/4);
-  filter(THRESHOLD);
+  filter(GRAY);
   
 }
 
