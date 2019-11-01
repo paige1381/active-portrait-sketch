@@ -42,7 +42,7 @@ function setup() {
   filter(GRAY);
   
   tint(255, 127)
-  image(img, width/2 - 50, height/2);
+  image(img, width/3, height/2);
   filter(GRAY);
   
   stroke(0);
