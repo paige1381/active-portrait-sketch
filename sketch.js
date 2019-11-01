@@ -37,12 +37,13 @@ function setup() {
     xPos += startSize;
     yPos = 0;
   }
+
+  image(img, width/2, height - height/4);
+  filter(THRESHOLD);
   
 }
 
-function draw() {
-    image(img, width/2, height - height/4);
-}
+function draw() {}
 
 function drawSquares(x, y, startSize, finalSize, steps, offset) {
   
