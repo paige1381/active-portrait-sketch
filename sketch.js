@@ -7,7 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
 
-  img = loadImage("test-image.png");
+//   img = loadImage("test-image.png");
   
   startSize = width/8;
   
@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw() {
-    image(img, 0, 0);
+    // image(img, 0, 0);
 }
 
 function drawSquares(x, y, startSize, finalSize, steps, offset) {
