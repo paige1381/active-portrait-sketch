@@ -38,10 +38,11 @@ function setup() {
     yPos = 0;
   }
 
+  tint(243, 34, 0)
   image(img, width/2, height/2);
   filter(GRAY);
   
-  tint(255, 127)
+  tint(0, 201, 243, 127)
   image(img, width/3, height/2);
   filter(GRAY);
   
