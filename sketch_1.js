@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
+  background(255);
 
   imageMode(CENTER);
   img.resize(0, height/2);
@@ -16,7 +16,7 @@ function setup() {
   startSize = width/8;
   
   strokeWeight(3);
-  stroke(255);
+  stroke(0);
   noFill();
   const numSquaresX = width/startSize;
   let numSquaresY = height/startSize;
@@ -41,8 +41,8 @@ function setup() {
   image(img, width/2, height/2);
   filter(GRAY);
   
-  stroke(0);
-  fill(255);
+  stroke(255);
+  fill(0);
   numSquaresY = height/2/startSize;
   xPos = 0;
   yPos = height - startSize;
