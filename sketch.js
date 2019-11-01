@@ -40,7 +40,7 @@ function setup() {
 }
 
 function draw() {
-    image(img, width/2, height + height/2);
+    image(img, width/2, height - height/2);
 }
 
 function drawSquares(x, y, startSize, finalSize, steps, offset) {
