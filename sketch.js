@@ -2,13 +2,16 @@ let img;
 let startSize;
 const finalSize = 10;
 
+function preload() {
+    img = loadImage("test-image.png");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
 
-//   img = loadImage("test-image.png");
-  
+  img.resize(0, height/2);
+
   startSize = width/8;
   
   stroke(0);
@@ -37,7 +40,7 @@ function setup() {
 }
 
 function draw() {
-    // image(img, 0, 0);
+    image(img, width/2, height + height/2);
 }
 
 function drawSquares(x, y, startSize, finalSize, steps, offset) {
