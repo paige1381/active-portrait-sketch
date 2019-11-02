@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(255);
+  background(232, 236, 230);
 
   imageMode(CENTER);
   img.resize(0, height/2);
@@ -16,27 +16,27 @@ function setup() {
   startSize = width/8;
   
   strokeWeight(3);
-  stroke(0);
-  noFill();
-  const numSquaresX = width/startSize;
-  let numSquaresY = height/startSize;
-  let xPos = 0;
-  let yPos = 0;
+//   stroke(0);
+//   noFill();
+//   const numSquaresX = width/startSize;
+//   let numSquaresY = height/startSize;
+//   let xPos = 0;
+//   let yPos = 0;
   
-  for (let i = 0; i < numSquaresX; i++) {
-    for (let j = 0; j < numSquaresY; j++) {
+//   for (let i = 0; i < numSquaresX; i++) {
+//     for (let j = 0; j < numSquaresY; j++) {
       
-      const steps = Math.round(random(4, 7));
-      const offset = random(-3, 3);
+//       const steps = Math.round(random(4, 7));
+//       const offset = random(-3, 3);
 
-      drawSquares(xPos, yPos, startSize, finalSize, steps, offset);
+//       drawSquares(xPos, yPos, startSize, finalSize, steps, offset);
       
-      yPos += startSize;
-    }
+//       yPos += startSize;
+//     }
     
-    xPos += startSize;
-    yPos = 0;
-  }
+//     xPos += startSize;
+//     yPos = 0;
+//   }
 
   tint(243, 34, 0)
   image(img, width/2, height/2);
@@ -45,6 +45,9 @@ function setup() {
   tint(0, 201, 243, 127)
   image(img, width/3, height/2);
 //   filter(GRAY);
+
+  tint(253, 154, 52, 80)
+  image(img, 2*width/3, height/2);
   
   stroke(0);
   fill(255);
