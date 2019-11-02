@@ -42,7 +42,7 @@ function setup() {
   image(img, width/2, height/2);
 //   filter(GRAY);
   
-  tint(0, 201, 243, 127)
+  tint(0, 201, 243, 80)
   image(img, width/3, height/2);
 //   filter(GRAY);
 
@@ -50,7 +50,7 @@ function setup() {
   image(img, 2*width/3, height/2);
   
   stroke(0);
-  fill(255);
+  fill(232, 236, 230);
   numSquaresY = height/2/startSize;
   xPos = 0;
   yPos = height - startSize;
