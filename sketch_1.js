@@ -18,10 +18,10 @@ function setup() {
   strokeWeight(3);
 //   stroke(0);
 //   noFill();
-//   const numSquaresX = width/startSize;
-//   let numSquaresY = height/startSize;
-//   let xPos = 0;
-//   let yPos = 0;
+  const numSquaresX = width/startSize;
+  let numSquaresY = height/startSize;
+  let xPos = 0;
+  let yPos = 0;
   
 //   for (let i = 0; i < numSquaresX; i++) {
 //     for (let j = 0; j < numSquaresY; j++) {
