@@ -1,3 +1,9 @@
+const urlParams = new URLSearchParams(window.location.search)
+
+const r = parseInt(urlParams.get('r'), 10)
+const g = parseInt(urlParams.get('g'), 10)
+const b = parseInt(urlParams.get('b'), 10)
+
 let img;
 let startSize;
 const finalSize = 10;
@@ -38,16 +44,16 @@ function setup() {
 //     yPos = 0;
 //   }
 
-  tint(243, 34, 0)
+  tint(r, g, b)
   image(img, width/2, height/2);
 //   filter(GRAY);
   
-  tint(0, 201, 243, 80)
-  image(img, width/3, height/2);
+//   tint(0, 201, 243, 80)
+//   image(img, width/3, height/2);
 //   filter(GRAY);
 
-  tint(253, 154, 52, 80)
-  image(img, 2*width/3, height/2);
+//   tint(253, 154, 52, 80)
+//   image(img, 2*width/3, height/2);
   
   stroke(0);
   fill(232, 236, 230);
@@ -56,7 +62,7 @@ function setup() {
   yPos = height - startSize;
 
   for (let i = 0; i < numSquaresX; i++) {
-    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY - 1)); j++) {
+    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY)); j++) {
       
       const steps = Math.round(random(4, 7));
       const offset = random(-3, 3);
