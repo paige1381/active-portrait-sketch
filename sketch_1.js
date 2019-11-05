@@ -9,7 +9,7 @@ let startSize;
 const finalSize = 10;
 
 function preload() {
-    img = loadImage("https://active-portrait-images.s3-us-west-2.amazonaws.com/test-image.png");
+    img = createImg("https://active-portrait-images.s3-us-west-2.amazonaws.com/test-image.png");
 }
 
 function setup() {
