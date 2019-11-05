@@ -8,14 +8,11 @@ let img;
 let startSize;
 const finalSize = 10;
 
-function preload() {
-    img = createImg("https://active-portrait-images.s3-us-west-2.amazonaws.com/test-image.png");
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(232, 236, 230);
 
+  img = createImg("https://active-portrait-images.s3-us-west-2.amazonaws.com/test-image.png");
   imageMode(CENTER);
   img.resize(0, height/2);
   
