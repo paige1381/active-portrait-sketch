@@ -2,7 +2,7 @@ const fs = require("fs");
 const https = require("https");
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'))
 
@@ -21,5 +21,5 @@ app.get('/:id', async (request, response) => {
     })
 })
 
-app.listen(PORT || process.env.PORT)
+app.listen(PORT)
 
