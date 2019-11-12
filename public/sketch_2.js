@@ -1,43 +1,38 @@
 let img;
+let futura;
 
 function preload() {
     img = loadImage("temp.png");
+    raleway = loadFont('raleway-black.ttf')
 }
 
 function setup() {
-//   console.log(pixelDensity());
+
   createCanvas(windowWidth, windowHeight);
-  background(255, 255, 255);
-  let c1 = color(238, 90, 140);
-  let c2 = color(250, 12, 34);
-//   setGradient(0, 0, width, height, c1, c2, 1);
+  background(214, 241, 84);
+
   imageMode(CENTER);
-  img.resize(9 * width/10, 0);
-//   tint(250, 12, 34)
-//   tint(6, 0, 254)
-  blendMode(HARD_LIGHT)
-//   tint(50, 140, 254)
-  img.filter(GRAY)
-  image(img, width/2, height/2 - height/8);
+  img.resize(width, 0);
+  
+  tint(0, 60)
+  image(img, 2 * width/5, height/2);
+
+  fill(0);
+  textFont(raleway);
+  textSize(height/4);
+  text('M', width/8, height/2);
+
+  textSize(height/5);
+  text('E', 3 * width/4, 5 * height/6);
+
+  tint(255, 255)
+  image(img, width/2, height/2);
+
+  textSize(height/6);
+  text('O', 3 * width/5, 3 * height/5);
+
+  textSize(height/4);
+  text('V', width/4, 7 * height/8);
+
+  
 }
-
-
-function setGradient(x, y, w, h, c1, c2, axis) {
-    noFill();
-    if (axis == 0) {  // Top to bottom gradient
-      for (var i = y; i <= y+h; i++) {
-        var inter = map(i, y, y+h, 0, 1);
-        var c = lerpColor(c1, c2, inter);
-        stroke(c);
-        line(x, i, x+w, i);
-      }
-    }  
-    else if (axis == 1) {  // Left to right gradient
-      for (var i = x; i <= x+w; i++) {
-        var inter = map(i, x, x+w, 0, 1);
-        var c = lerpColor(c1, c2, inter);
-        stroke(c);
-        line(i, y, i, y+h);
-      }
-    }
-  }

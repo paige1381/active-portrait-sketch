@@ -1,102 +1,32 @@
-const urlParams = new URLSearchParams(window.location.search)
-
-const r = parseInt(urlParams.get('r'), 10);
-const g = parseInt(urlParams.get('g'), 10);
-const b = parseInt(urlParams.get('b'), 10);
-
 let img;
-let startSize;
-const finalSize = 10;
 
 function preload() {
     img = loadImage("temp.png");
 }
 
 function setup() {
+
   createCanvas(windowWidth, windowHeight);
-  background(232, 236, 230);
+//   // pink
+//   background(237, 102, 197);
+//   // blue
+//   background(87, 179, 249);
+  // orange
+  background(239, 96, 44);
+//   // yellow
+//   background(246, 203, 91);
 
   imageMode(CENTER);
-  img.resize(0, height/2);
+  img.resize(width, 0);
   
-  startSize = width/8;
-  
-  strokeWeight(3);
-//   stroke(0);
-//   noFill();
-  const numSquaresX = width/startSize;
-  let numSquaresY = height/startSize;
-  let xPos = 0;
-  let yPos = 0;
-  
-  for (let i = 0; i < numSquaresX; i++) {
-    for (let j = 0; j < numSquaresY; j++) {
-      
-      const steps = Math.round(random(4, 7));
-      const offset = random(-3, 3);
-
-      drawSquares(xPos, yPos, startSize, finalSize, steps, offset);
-      
-      yPos += startSize;
-    }
-    
-    xPos += startSize;
-    yPos = 0;
-  }
-
-  tint(r, g, b)
+  img.filter(GRAY)
+//   // pink
+//   tint(237, 102, 197);
+//   // blue
+//   tint(87, 179, 249);
+  // orange
+  tint(239, 96, 44);
+//   // yellow
+//   tint(246, 203, 91)
   image(img, width/2, height/2);
-//   filter(GRAY);
-  
-//   tint(0, 201, 243, 80)
-//   image(img, width/3, height/2);
-//   filter(GRAY);
-
-//   tint(253, 154, 52, 80)
-//   image(img, 2*width/3, height/2);
-  
-  stroke(0);
-  fill(232, 236, 230);
-  numSquaresY = height/2/startSize;
-  xPos = 0;
-  yPos = height - startSize;
-
-  for (let i = 0; i < numSquaresX; i++) {
-    for (let j = 0; j < Math.round(random(numSquaresY/2, numSquaresY)); j++) {
-      
-      const steps = Math.round(random(4, 7));
-      const offset = random(-3, 3);
-
-      drawSquares(xPos, yPos, startSize, finalSize, steps, offset);
-      
-      yPos -= startSize;
-    }
-    
-    xPos += startSize;
-    yPos = height - startSize;
-  }
-
 }
-
-function draw() {}
-
-function drawSquares(x, y, startSize, finalSize, steps, offset) {
-  
-  const diff = (startSize/2 - finalSize/2)/(steps - 1)
-  
-  let xPos = x;
-  let yPos = y;
-  
-  let size = startSize
-  
-  for (let i = 0; i < steps; i++) {
-    
-    rect(xPos, yPos, size, size);
-    
-    xPos += (diff + offset);
-    yPos += (diff + offset);
-    size -= (2*diff);
-  }
-  
-}
-

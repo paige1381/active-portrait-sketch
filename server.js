@@ -11,7 +11,8 @@ app.set('view engine', 'ejs')
 app.get('/favicon.ico', (req, res) => {})
 
 app.get('/:id', async (request, response) => {
-    const url = `https://active-portrait-images.s3-us-west-2.amazonaws.com/${request.params.id}.jpg`;
+    console.log(request.params)
+    const url = `https://active-portrait-images.s3-us-west-2.amazonaws.com/${request.params.id}.png`;
     const file = fs.createWriteStream("public/temp.png");
     const req = https.get(url, (res) => {
         res.pipe(file);
