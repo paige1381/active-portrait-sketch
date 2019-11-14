@@ -38,6 +38,6 @@ function setup() {
     }
 
     tint(255, 0, 0, 230)
-    image(img, width/2, height/2);
+    image(img, width/2, (2 * height - img.height)/2);
     
 }

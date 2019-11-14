@@ -28,5 +28,5 @@ function setup() {
   tint(239, 96, 44);
 //   // yellow
 //   tint(246, 203, 91)
-  image(img, width/2, height/2);
+  image(img, width/2, (2 * height - img.height)/2);
 }

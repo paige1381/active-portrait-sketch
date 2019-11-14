@@ -22,7 +22,7 @@ function setup() {
   img.filter(GRAY);
   img.filter(POSTERIZE, 40);
 
-  image(img, width/2, height/2);
+  image(img, width/2, (2 * height - img.height)/2);
 
   fill(246, 203, 91);
   text('V E', width/4, 7 * height/8);

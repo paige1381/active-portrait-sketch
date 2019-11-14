@@ -45,7 +45,7 @@ function setup() {
   }
 
   tint(r, g, b)
-  image(img, width/2, height/2);
+  image(img, width/2, (2 * height - img.height)/2);
 //   filter(GRAY);
   
 //   tint(0, 201, 243, 80)

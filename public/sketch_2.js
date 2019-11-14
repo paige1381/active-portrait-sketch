@@ -26,7 +26,7 @@ function setup() {
   text('E', 3 * width/4, 5 * height/6);
 
   tint(255, 255)
-  image(img, width/2, height/2);
+  image(img, width/2, (2 * height - img.height)/2);
 
   textSize(height/6);
   text('O', 3 * width/5, 3 * height/5);
