@@ -1,15 +1,20 @@
 let img;
 let futura;
+let logo;
 
 function preload() {
+    logo = loadImage("nike-logo.svg");
+    futura = loadFont('futura_condensed_bold.otf');
     img = loadImage("temp.png");
-    futura = loadFont('futura_condensed_bold.otf')
 }
 
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
   background(16);
+
+  logo.filter(INVERT)
+  image(logo, width - logo.width - 50, 50)  
 
   imageMode(CENTER);
   img.resize(width, 0);

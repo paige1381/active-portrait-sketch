@@ -1,9 +1,11 @@
 let img;
+let logo;
 let futura;
 
 function preload() {
+    logo = loadImage("nike-logo.svg");
+    raleway = loadFont('raleway-black.ttf');
     img = loadImage("temp.png");
-    raleway = loadFont('raleway-black.ttf')
 }
 
 function setup() {
@@ -11,11 +13,13 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(214, 241, 84);
 
+  image(logo, width - logo.width - 50, 50)  
+
   imageMode(CENTER);
   img.resize(width, 0);
   
   tint(0, 60)
-  image(img, 2 * width/5, height/2);
+  image(img, 2 * width/5, (2 * height - img.height)/2);
 
   fill(0);
   textFont(raleway);

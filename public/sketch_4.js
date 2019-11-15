@@ -1,7 +1,9 @@
 let futura;
 let img;
+let logo;
 
 function preload() {
+    logo = loadImage("nike-logo.svg");
     img = loadImage("temp.png");
     futura = loadFont('futura_condensed_bold.otf')
 }
@@ -14,7 +16,6 @@ function setup() {
     let textWidths = [];
     let textHeight;
  
-
     createCanvas(windowWidth, windowHeight);
     background(255);
 
@@ -37,7 +38,11 @@ function setup() {
         }
     }
 
+    logo.filter(INVERT);
     tint(255, 0, 0, 230)
+    console.log(height/rows - textHeight)
+    image(logo, width - logo.width + 50, height/rows - textHeight + 50);  
+
     image(img, width/2, (2 * height - img.height)/2);
     
 }
