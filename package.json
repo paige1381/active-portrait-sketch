@@ -19,6 +19,6 @@
   "homepage": "https://github.com/paige1381/active-portrait-sketch#readme",
   "dependencies": {
     "ejs": "^2.7.1",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
